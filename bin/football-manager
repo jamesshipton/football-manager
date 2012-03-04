@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+require 'ruby-debug'
+require 'optparse'
+
+require File.dirname(__FILE__) + '/../lib/football-manager'
+
+options = {}
+
+optparse = OptionParser.new do |opts|
+  options[:player_data] = nil
+  opts.on('-f', '--file FILE', 'Input player data') { |player_data| options[:player_data] = player_data }
+end
+
+optparse.parse!
+
+FootballManager::Game.pick_teams(options)
