@@ -6,6 +6,7 @@ describe FootballManager::Team do
   context 'valid with players' do
     let(:players) { ['player 1'] }
     its(:players) { should == ['player 1'] }
+    its(:size) { should == 1 }
   end
 
   context 'invalid with no players' do
