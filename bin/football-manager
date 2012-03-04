@@ -14,4 +14,4 @@ end
 
 optparse.parse!
 
-FootballManager::Game.pick_teams(options)
+FootballManager::Game.pick_teams(options[:player_data])
