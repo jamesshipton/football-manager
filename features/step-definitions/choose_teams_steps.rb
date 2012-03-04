@@ -1,6 +1,5 @@
 Given /^(\d+) available players?$/ do |number_of_players|
-  player_content = %{ player_1
-                      player_2 }
+  player_content = number_of_players.to_i.times.inject("") { |sum, i| sum << "player_#{i+1}\n" }
   @player_data = write_file('player_data.txt', player_content)
 end
 
