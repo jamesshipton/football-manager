@@ -11,7 +11,7 @@ describe FootballManager::PlayersCreator do
     it 'iterate through the player details, creating new players' do
       FootballManager::Player.should_receive(:new).once.with(player_1)
       FootballManager::Player.should_receive(:new).once.with(player_2)
-      subject.create_players([player_1, player_2])
+      subject.create_players(player_data)
     end
   end
 end
