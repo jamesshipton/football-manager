@@ -10,6 +10,10 @@ module FootballManager
     def size
       @players.size
     end
+
+    def points
+      @players.inject(0) { |total_skill, player| total_skill + player.skill}
+    end
   end
 end
 

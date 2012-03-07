@@ -12,7 +12,14 @@ Feature: Pick balanced teams
     Then each team should have 1 player and 5 points
 
   Scenario: 5 players are available
-    Given 5 available players
-    When I pick the teams
-    Then one team should have 3 players and the other team should have 2 players
+  Given the following available players
+    | name      | skill |
+    | player 1  | 5     |
+    | player 2  | 5     |
+    | player 3  | 1     |
+    | player 4  | 1     |
+    | player 5  | 3     |
 
+  When I pick the teams
+  Then one team should have 3 players and 7 points
+    And one team should have 2 players and 8 points
