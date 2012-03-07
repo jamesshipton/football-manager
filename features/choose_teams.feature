@@ -4,9 +4,12 @@ Feature: Pick balanced teams
   I want to pick balanced teams from the list of available players
 
   Scenario: 2 players are available
-    Given 2 available players
+    Given the following available players
+      | name      | skill |
+      | player 1  | 5     |
+      | player 2  | 5     |
     When I pick the teams
-    Then each team should have 1 player
+    Then each team should have 1 player and 5 points
 
   Scenario: 5 players are available
     Given 5 available players
