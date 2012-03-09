@@ -1,10 +1,15 @@
 module FootballManager
   class Team
-    attr_accessor :players
+    def initialize
+      @players = []
+    end
 
-    def initialize(players)
-      raise FootballManager::TeamError, 'You cannot create a team with no players' if players.nil?
-      @players = players
+    def <<(player)
+      @players << player
+    end
+
+    def empty?
+      @players.empty?
     end
 
     def size

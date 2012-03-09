@@ -1,35 +1,38 @@
 require 'spec_helper'
 
 describe FootballManager::Team do
-  subject { FootballManager::Team.new(players)}
+  subject { FootballManager::Team.new}
 
-  context 'valid' do
-    let(:players) { ['player 1'] }
+  context 'without any players' do
+    its(:size) { should == 0 }
 
-    its(:players) { should == ['player 1'] }
+    its(:points) { should == 0 }
+
+    its(:empty?) { should be_true }
   end
 
-  context 'invalid with no players' do
-    let(:players) { nil }
-
-    it 'raises an error' do
-      lambda { subject }.should raise_error(FootballManager::TeamError, 'You cannot create a team with no players')
-    end
-  end
-
-  context 'with 1 player' do
+  context 'a player is added' do
     let(:player_1) { double('player 1', :skill => 5) }
-    let(:players) { [player_1] }
+
+    before(:each) do
+      subject << player_1
+    end
 
     its(:size) { should == 1 }
 
     its(:points) { should == 5 }
+
+    its(:empty?) { should be_false }
   end
 
-  context 'with 2 players' do
+  context '2 players are added' do
     let(:player_1) { double('player 1', :skill => 5) }
     let(:player_2) { double('player 2', :skill => 3) }
-    let(:players) { [player_1, player_2] }
+
+    before(:each) do
+      subject << player_1
+      subject << player_2
+    end
 
     its(:size) { should == 2 }
 
