@@ -1,5 +1,7 @@
 module FootballManager
   class Team
+    attr_reader :players
+
     def initialize
       @players = []
     end
