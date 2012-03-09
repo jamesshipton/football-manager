@@ -9,6 +9,10 @@ When /^I pick the teams$/ do
   run_simple(unescape('football-manager -f player_data.txt'))
 end
 
-Then /^(?:one|each) team should have (\d+) players? and (\d+) points?$/ do |number_of_players, points|
-  check_both_teams_are_fair(number_of_players, points)
+Then /^each team should have (\d+) players? and (\d+) points?$/ do |number_of_players, points|
+  check_both_teams_are_equal(number_of_players, points)
+end
+
+Then /^one team should have (\d+) players? and (\d+) points?$/ do |number_of_players, points|
+  check_team_has_the_following(number_of_players, points)
 end
