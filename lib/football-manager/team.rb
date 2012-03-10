@@ -21,6 +21,10 @@ module FootballManager
     def points
       @players.inject(0) { |total_skill, player| total_skill + player.skill}
     end
+
+    def players_ordered_by_name
+      @players.sort_by { |player| player.name }
+    end
   end
 end
 

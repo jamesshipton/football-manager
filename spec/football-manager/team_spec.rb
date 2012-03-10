@@ -9,6 +9,8 @@ describe FootballManager::Team do
     its(:points) { should == 0 }
 
     its(:empty?) { should be_true }
+
+    its(:players) { should == [] }
   end
 
   context 'a player is added' do
@@ -23,20 +25,26 @@ describe FootballManager::Team do
     its(:points) { should == 5 }
 
     its(:empty?) { should be_false }
+
+    its(:players) { should == [player_1] }
   end
 
   context '2 players are added' do
-    let(:player_1) { double('player 1', :skill => 5) }
-    let(:player_2) { double('player 2', :skill => 3) }
+    let(:player_A) { double('player A', :name => 'player A', :skill => 5) }
+    let(:player_B) { double('player B', :name => 'player B', :skill => 3) }
 
     before(:each) do
-      subject << player_1
-      subject << player_2
+      subject << player_B
+      subject << player_A
     end
 
     its(:size) { should == 2 }
 
     its(:points) { should == 8 }
+
+    its(:players) { should == [player_B, player_A] }
+
+    its(:players_ordered_by_name) { should == [player_A, player_B] }
   end
 
 end
