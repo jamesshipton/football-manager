@@ -16,8 +16,8 @@ describe FootballManager::TeamPicker do
         team_a.should_receive(:empty?).twice.and_return(true, false)
         team_a.should_receive(:points).once.and_return(1)
         team_b.should_receive(:points).once.and_return(0)
-        team_a.should_receive(:<<).with(player_1)
-        team_b.should_receive(:<<).with(player_2)
+        team_a.should_receive(:<<).once
+        team_b.should_receive(:<<).once
       end
 
       it { should == [team_a, team_b] }
