@@ -8,7 +8,7 @@ I am a tool to help you pick the fairest teams for your game
     
 ## HOW TO USE ME
 
-1) Create a file with all your available players, including their names and skill level
+1) Create a file with all your available players, including their names and skill level (1-5)
 
 e.g. players.txt
 
