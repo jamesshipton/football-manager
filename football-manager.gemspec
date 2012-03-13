@@ -53,10 +53,7 @@ Gem::Specification.new do |s|
   ## those that are only needed during development
   s.add_development_dependency  'aruba', '~> 0.4'
   s.add_development_dependency  'cucumber', '~>1.1'
-  s.add_development_dependency  'aruba',    '~> 0.4'
   s.add_development_dependency  'rake'
-  s.add_development_dependency  'awesome_print'
-  s.add_development_dependency  'ruby-debug19'
 
   ## Leave this section as-is. It will be automatically generated from the
   ## contents of your Git repository via the gemspec task. DO NOT REMOVE
