@@ -54,4 +54,5 @@ DEPENDENCIES
   awesome_print
   cucumber (~> 1.1)
   rake
+  rspec (~> 2.8)
   ruby-debug19
