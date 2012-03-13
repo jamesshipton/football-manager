@@ -1,4 +1,4 @@
-module NAME
+module FOOTBALLMANAGER
   VERSION = '0.1.0'
 end
 

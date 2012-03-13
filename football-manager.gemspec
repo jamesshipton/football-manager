@@ -12,15 +12,15 @@ Gem::Specification.new do |s|
   ## Leave these as is they will be modified for you by the rake gemspec task.
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
-  s.name              = 'NAME'
-  s.version           = '0.0'
-  s.date              = '2010-01-01'
-  s.rubyforge_project = 'NAME'
+  s.name              = 'football-manager'
+  s.version           = '0.1.0'
+  s.date              = '2012-03-13'
+  s.rubyforge_project = 'football-manager'
 
   ## Make sure your summary is short. The description may be as long
   ## as you like.
-  s.summary     = "Picks two teams based on the players ability"
-  s.description = "Picks two teams based on the players ability"
+  s.summary     = "Picks two teams fair based on player skill"
+  s.description = "Picks two teams fair based on player skill"
 
   ## List the primary authors. If there are a bunch of authors, it's probably
   ## better to set the email to an email list or something. If you don't have
@@ -43,7 +43,7 @@ Gem::Specification.new do |s|
   ## Specify any RDoc options here. You'll want to add your README and
   ## LICENSE files to the extra_rdoc_files list.
   s.rdoc_options = ["--charset=UTF-8"]
-  s.extra_rdoc_files = %w[README LICENSE]
+  s.extra_rdoc_files = %w[README.md]
 
   ## List your runtime dependencies here. Runtime dependencies are those
   ## that are needed for an end user to actually USE your code.
@@ -51,13 +51,45 @@ Gem::Specification.new do |s|
 
   ## List your development dependencies here. Development dependencies are
   ## those that are only needed during development
-  s.add_development_dependency 'aruba', '~> 0.4'
+  s.add_development_dependency  'aruba', '~> 0.4'
+  s.add_development_dependency  'cucumber', '~>1.1'
+  s.add_development_dependency  'aruba',    '~> 0.4'
+  s.add_development_dependency  'rake'
+  s.add_development_dependency  'awesome_print'
+  s.add_development_dependency  'ruby-debug19'
 
   ## Leave this section as-is. It will be automatically generated from the
   ## contents of your Git repository via the gemspec task. DO NOT REMOVE
   ## THE MANIFEST COMMENTS, they are used as delimiters by the task.
   # = MANIFEST =
-  s.files = %w[]
+  s.files = %w[
+    Gemfile
+    Gemfile.lock
+    README.md
+    Rakefile
+    bin/football-manager
+    features/choose_teams.feature
+    features/step-definitions/choose_teams_steps.rb
+    features/support/aruba.rb
+    features/support/choose_teams_support.rb
+    football-manager.gemspec
+    lib/football-manager.rb
+    lib/football-manager/custom_exceptions.rb
+    lib/football-manager/game.rb
+    lib/football-manager/i_o_helper.rb
+    lib/football-manager/player.rb
+    lib/football-manager/players_creator.rb
+    lib/football-manager/team.rb
+    lib/football-manager/team_picker.rb
+    lib/football-manager/team_sheet_creator.rb
+    spec/football-manager/game_spec.rb
+    spec/football-manager/player_spec.rb
+    spec/football-manager/players_creator_spec.rb
+    spec/football-manager/team_picker_spec.rb
+    spec/football-manager/team_sheet_creator_spec.rb
+    spec/football-manager/team_spec.rb
+    spec/spec_helper.rb
+  ]
   # = MANIFEST =
 
   ## Test files will be grabbed from the file list. Make sure the path glob
