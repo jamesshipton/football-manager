@@ -25,6 +25,15 @@ e.g. players.txt
     
 3) Two fair team should now be output
 
+    Team A has 3 player and 11 points
+    Alan
+    Steve T
+    Tom
+    Team B has 3 player and 11 points
+    Jeff
+    Paul
+    Steve B
+
 
 
 I will randomise the teams to the best of my algorithmic ability!
