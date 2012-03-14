@@ -4,10 +4,16 @@ describe FootballManager::TeamSheetCreator do
   subject { FootballManager::TeamSheetCreator }
 
   describe 'create_team_sheet' do
-    let(:player_1) { double('player 1', :name => 'player 1', :skill => 1) }
-    let(:player_2) { double('player 2', :name => 'player 2', :skill => 1) }
-    let(:team_1) { double('team 1', :size => 1, :points => 5, :players => [player_1]) }
-    let(:team_2) { double('team 2', :size => 1, :points => 5, :players => [player_2]) }
+    let(:player_1)  { double('player 1', :name => 'player 1', :skill => 1) }
+    let(:player_2)  { double('player 2', :name => 'player 2', :skill => 1) }
+    let(:team_1)    { double( 'team 1',
+                              :size => 1,
+                              :points => 5,
+                              :players_ordered_by_name => [player_1]) }
+    let(:team_2)    { double( 'team 2',
+                              :size => 1,
+                              :points => 5,
+                              :players_ordered_by_name => [player_2]) }
 
 
     it 'asks each team for their size' do
