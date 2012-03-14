@@ -1,5 +1,5 @@
 module FootballManager
-  module Game
+  class Game
     def self.pick_teams(player_data_reference)
       player_data = FootballManager::IOHelper.fetch_player_data(player_data_reference)
       players = FootballManager::PlayersCreator.create_players(player_data)

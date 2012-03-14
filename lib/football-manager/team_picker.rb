@@ -1,5 +1,5 @@
 module FootballManager
-  module TeamPicker
+  class TeamPicker
     def self.calculate_fair_teams(players)
       # players_in_descending_order = players.sort { |a,b| b.skill <=> a.skill }
       players_in_descending_order = []
