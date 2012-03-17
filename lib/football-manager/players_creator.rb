@@ -7,8 +7,10 @@ module FootballManager
       def create_players(player_data)
         player_data.collect do |player|
           player =~ player_pattern
-          FootballManager::Player.new(name, skill) if self.player_match = Regexp.last_match
-        end.compact!
+          if self.player_match = Regexp.last_match
+            FootballManager::Player.new(name, skill)
+          end
+        end.compact
       end
 
       private
