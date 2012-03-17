@@ -13,8 +13,8 @@ Gem::Specification.new do |s|
   ## If your rubyforge_project name is different, then edit it and comment out
   ## the sub! line in the Rakefile
   s.name              = 'football-manager'
-  s.version           = '0.1.2'
-  s.date              = '2012-03-13'
+  s.version           = '0.1.3'
+  s.date              = '2012-03-17'
   s.rubyforge_project = 'football-manager'
 
   ## Make sure your summary is short. The description may be as long
