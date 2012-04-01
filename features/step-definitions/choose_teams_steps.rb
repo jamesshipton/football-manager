@@ -1,4 +1,4 @@
-Given 'the following available players' do |players|
+Given 'the following players' do |players|
   player_content = players.hashes.inject('') do |total_content, player|
     total_content << "#{player['name']},#{player['skill']}\n"
   end
