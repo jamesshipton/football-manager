@@ -17,8 +17,8 @@ describe FootballManager::TeamSheetCreator do
 
 
     it 'asks each team for their size' do
-      team_1.should_receive(:size).once
-      team_2.should_receive(:size).once
+      team_1.should_receive(:size).twice
+      team_2.should_receive(:size).twice
       subject.create_team_sheet([team_1, team_2])
     end
 
@@ -29,10 +29,17 @@ describe FootballManager::TeamSheetCreator do
     end
 
     it 'outputs the team size in the teamsheet' do
-      $stdout.should_receive(:puts).with("Team A has 1 player and 5 points")
-      $stdout.should_receive(:puts).with("player 1")
-      $stdout.should_receive(:puts).with("Team B has 1 player and 5 points")
-      $stdout.should_receive(:puts).with("player 2")
+      $stdout.should_receive(:puts).with('Team Bibs have 1 player and 5 points')
+      $stdout.should_receive(:puts).with('')
+      $stdout.should_receive(:puts).with('Team Bibs')
+      $stdout.should_receive(:puts).with('--------')
+      $stdout.should_receive(:puts).with('player 1')
+      $stdout.should_receive(:puts).with('Team Colours have 1 player and 5 points')
+      $stdout.should_receive(:puts).with('')
+      $stdout.should_receive(:puts).with('Team Colours')
+      $stdout.should_receive(:puts).with('--------')
+      $stdout.should_receive(:puts).with('player 2')
+      $stdout.should_receive(:puts).with('')
       subject.create_team_sheet([team_1, team_2])
     end
   end
