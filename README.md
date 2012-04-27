@@ -23,17 +23,21 @@ e.g. players.txt
 
     football-manager -f players.txt
     
-3) Two fair team should now be output
+3) Two fair teams should now be output
 
-    Team A has 3 player and 11 points
+    Team Bibs have 3 players and 11 points
+    Team Colours have 3 player and 11 points
+
+    Team Bibs
+    --------
     Alan
     Steve T
     Tom
-    Team B has 3 player and 11 points
+
+    Team Colours
+    --------
     Jeff
     Paul
     Steve B
-
-
 
 I will randomise the teams to the best of my algorithmic ability!
