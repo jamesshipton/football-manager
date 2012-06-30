@@ -6,5 +6,4 @@ group :test, :development do
   gem 'aruba',        '~>0.4'
   gem 'rake'
   gem 'awesome_print'
-  gem 'ruby-debug19', :require => 'ruby-debug'
 end
