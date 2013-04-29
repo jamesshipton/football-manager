@@ -5,10 +5,10 @@ I am a tool to help you pick the fairest teams for your game
 ## HOW TO INSTALL ME
 
     gem install football-manager
-    
+
 ## HOW TO USE ME
 
-1) Create a file with all your available players, including their names and skill level (1-5)
+1) Create a file with all your available players, including their names and skill level (1-9)
 
 e.g. players.txt
 
@@ -22,7 +22,7 @@ e.g. players.txt
 2) Run me from the command line
 
     football-manager -f players.txt
-    
+
 3) Two fair teams should now be output
 
     Team Bibs have 3 players and 11 points

@@ -16,7 +16,7 @@ module FootballManager
 
     private
       def self.players_in_descending_order(players)
-        5.downto(1).collect do |i|
+        9.downto(1).collect do |i|
           players.select { |player| player.skill == i }.sort_by {rand}
         end.flatten!
       end

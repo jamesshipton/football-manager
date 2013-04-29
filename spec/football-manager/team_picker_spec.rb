@@ -24,11 +24,11 @@ describe FootballManager::TeamPicker do
     end
 
     context 'for 5 players with a total of 15 points' do
-      let(:player_with_5_skill) { double('player 5', :skill => 5) }
+      let(:player_with_7_skill) { double('player 5', :skill => 7) }
       let(:player_with_1_skill) { double('player 1', :skill => 1) }
       let(:player_with_3_skill) { double('player 3', :skill => 3) }
-      let(:players) { [ player_with_5_skill,
-                        player_with_5_skill,
+      let(:players) { [ player_with_7_skill,
+                        player_with_7_skill,
                         player_with_1_skill,
                         player_with_1_skill,
                         player_with_3_skill] }
@@ -38,11 +38,11 @@ describe FootballManager::TeamPicker do
       before(:each) do
         FootballManager::Team.should_receive(:new).twice.and_return(team_a, team_b)
         team_a.should_receive(:empty?).exactly(5).times.and_return(true, false, false, false, false)
-        team_a.should_receive(:points).exactly(4).times.and_return(5, 5, 8, 8)
-        team_b.should_receive(:points).exactly(4).times.and_return(0, 5, 6, 7)
-        team_a.should_receive(:<<).once.with(player_with_5_skill)
+        team_a.should_receive(:points).exactly(4).times.and_return(7, 7, 10, 10)
+        team_b.should_receive(:points).exactly(4).times.and_return(0, 7, 8, 9)
+        team_a.should_receive(:<<).once.with(player_with_7_skill)
         team_a.should_receive(:<<).once.with(player_with_3_skill)
-        team_b.should_receive(:<<).once.with(player_with_5_skill)
+        team_b.should_receive(:<<).once.with(player_with_7_skill)
         team_b.should_receive(:<<).once.with(player_with_1_skill)
         team_b.should_receive(:<<).once.with(player_with_1_skill)
       end

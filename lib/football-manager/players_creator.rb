@@ -15,7 +15,7 @@ module FootballManager
 
       private
         def player_pattern
-          /^\s*([a-zA-Z0-9]+\s?[a-zA-Z0-9]+)\s*,\s*([1-5]{1})\s*$/
+          /^\s*([a-zA-Z0-9]+\s?[a-zA-Z0-9]+)\s*,\s*([1-9]{1})\s*$/
         end
 
         def name
