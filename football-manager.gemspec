@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   ## the sub! line in the Rakefile
   s.name              = 'football-manager'
   s.version           = '0.2.0'
-  s.date              = '2012-06-30'
+  s.date              = '2013-04-30'
   s.rubyforge_project = 'football-manager'
 
   ## Make sure your summary is short. The description may be as long

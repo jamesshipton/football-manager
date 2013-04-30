@@ -1,5 +1,5 @@
 module FOOTBALLMANAGER
-  VERSION = '0.1.8'
+  VERSION = '0.2.0'
 end
 
 require File.dirname(__FILE__) + '/football-manager/game'
